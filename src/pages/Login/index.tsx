@@ -53,6 +53,9 @@ export const Login = () => {
         Login
       </button>
       <p className="text-center text-slate-600">Not a member? Sing Up</p>
+      <a href="https://www.behance.net/gallery/52772877/Sign-In-Form/modules/311607017" target="_blank">
+        <p className="text-teal-800 mt-4 hover:text-teal-300 transition text-center">Inspired by</p>
+      </a>
     </div>
   </div>
   )
