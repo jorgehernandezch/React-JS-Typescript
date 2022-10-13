@@ -1,101 +1,59 @@
-import { LockClosedIcon } from '@heroicons/react/20/solid'
+import { Link } from 'react-router-dom';
+import { FaFacebookF, FaTwitter } from 'react-icons/fa';
+import { BiArrowBack } from 'react-icons/bi';
 
 export const Login = () => {
   return(
-    <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-50">
-        <body class="h-full">
-        ```
-      */}
-      <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-md space-y-8">
-          <div>
-            <img
-              className="mx-auto h-12 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="Your Company"
-            />
-            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-              Sign in to your account
-            </h2>
-            <p className="mt-2 text-center text-sm text-gray-600">
-              Or{' '}
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                start your 14-day free trial
-              </a>
-            </p>
-          </div>
-          <form className="mt-8 space-y-6" action="#" method="POST">
-            <input type="hidden" name="remember" defaultValue="true" />
-            <div className="-space-y-px rounded-md shadow-sm">
-              <div>
-                <label htmlFor="email-address" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Email address"
-                />
-              </div>
-              <div>
-                <label htmlFor="password" className="sr-only">
-                  Password
-                </label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Password"
-                />
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
-                  id="remember-me"
-                  name="remember-me"
-                  type="checkbox"
-                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                />
-                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                  Remember me
-                </label>
-              </div>
-
-              <div className="text-sm">
-                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                  Forgot your password?
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <button
-                type="submit"
-                className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                  <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-                </span>
-                Sign in
-              </button>
-            </div>
-          </form>
-        </div>
+    <div className="w-full h-screen bg-gray-800 flex justify-center items-center">
+    <div className="
+        2xl:w-1/3
+        xl:w-1/3 
+        lg:w-1/3 
+        md:w-1/2 
+        sm:w-9/12 
+        w-9/12 
+        p-8
+        mx-auto
+        my-auto"
+    >
+      <Link to="/">
+        <BiArrowBack color="rgb(13 148 136)" size={35}/>
+      </Link>
+      <h3 className="text-white text-2xl text-center mb-4 font-medium">Sing In</h3>
+      <p className="text-slate-600 font-light text-center">Sing in quickly using</p>
+      <div className="flex flex-row justify-between items-center mt-4">
+        <button className="border-slate-600 border-x rounded-md border-y flex justify-center items-center p-3 w-36 gap-2 hover:bg-teal-600 hover:text-slate-300 transition text-slate-600">
+          <FaFacebookF size={14} color="rgb(51 65 85)"/>
+            facebook
+        </button >
+        <button className="border-slate-600 border-x rounded-md border-y flex justify-center items-center p-3 w-36 gap-2 hover:bg-teal-600 hover:text-slate-300 transition text-slate-600">
+          <FaTwitter size={14} color="rgb(51 65 85)"/>
+            twitter
+        </button>
       </div>
-    </>
+      <div className="flex flex-row justify-between items-center gap-2 my-4">
+        <div className="line w-1/4"></div>
+        <p className="w-2/4 text-center text-slate-600 font-light">Or use your email</p>
+        <div className="line w-1/4"></div>
+      </div>
+      <div className="w-full rounded-md">
+        <input type="text" placeholder="Email" className="text-slate-300 bg-slate-700 w-full rounded-md mb-5 border-transparent placeholder:text-slate-600 p-2 focus:border-slate-300 focus:shadow-transparent focus:ring-transparent" />
+      </div>
+      <div className="w-full rounded-md">
+        <input type="text" placeholder="Password" className="text-slate-300 bg-slate-700 w-full rounded-md mb-3 border-transparent placeholder:text-slate-600 p-2 focus:border-slate-300 focus:shadow-transparent focus:ring-transparent" />
+      </div>
+      <div className="w-full flex flex-row justify-between items-center">
+        <div className="flex flex-row justify-start items-center gap-2">
+          <input type="checkbox" className="appearance-none checked:bg-teal-600 focus:checked:bg-teal-600 hover:bg-transparente hover:text-teal-600 focus:border-teal-600 focus:ring-transparent"/>
+          <span className="text-slate-600 font-light text-sm">Remeber me</span>
+        </div>
+        <span className="text-slate-600 font-light text-sm">Forgot Password</span>
+      </div>
+      <button className="bg-teal-600 w-full p-3 my-6 text-white rounded-md hover:bg-teal-500 transition">
+        Login
+      </button>
+      <p className="text-center text-slate-600">Not a member? Sing Up</p>
+    </div>
+  </div>
   )
 }
